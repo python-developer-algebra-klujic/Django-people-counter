@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+
+{% block page_css %}
+
+{% endblock page_css %}
+
+{% block page_content %}
+    <h1>Upload and process image!</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="image" class="form-label">
+                Ucitajte image file koji zelite analizirati
+            </label>
+            <input class="form-control"
+                    accept="image/*"
+                    name="image"
+                    type="file"
+                    id="image"
+                    required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Upload and process</button>
+    </form>
+{% endblock page_content %}
+
+{% block page_js %}
+{% endblock page_js %}

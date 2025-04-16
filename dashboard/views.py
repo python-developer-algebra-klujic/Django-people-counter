@@ -1,10 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 def dashboard(request):
-    return HttpResponse('Dashboard is working!')
-
+    return render(request, 'dashboard/dashboard.html')
 
 def details(request, pk):
-    return HttpResponse('Details is working!')
+    return render(request, 'dashboard/details.html')
